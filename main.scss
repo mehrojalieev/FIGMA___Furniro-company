@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,wght@0,900;1,900&family=Fredoka:wght@400;700&family=Hind+Madurai:wght@400;700&family=Indie+Flower&family=Inter&family=Lato:wght@700&family=Montserrat:ital,wght@0,300;1,100&family=Nanum+Gothic:wght@400;700&family=Open+Sans:wght@300;700&family=Oswald:wght@200&family=Philosopher:wght@400;700&family=Poppins:wght@100;400&family=Raleway:wght@500&family=Roboto+Condensed&family=Roboto:wght@300;400&family=Tektur:wght@600&family=Tilt+Prism&display=swap');
+
+$myfont: 'Poppins', sans-serif;
+@mixin font($f-size, $color, $weight){
+        font-size: $f-size;
+        font-weight: $weight;
+        color: $color;
+}
+%btn-style{
+    padding: 15px 40px;
+    border-radius: 15px;
+    color: #000;
+    font-family: $myfont;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1300px;
+    height: 100px;
+    margin: 10px auto;
+    .nav__logo{
+        width: 170px;
+        height: 41px;
+        margin-left: 30px;
+    }
+    .nav__menu{
+       width: 500px;
+       height: 41px;
+       ul{
+        display: flex;
+        gap: 75px;
+        list-style: none;
+        li{
+            @include font(16px, #000, 600);
+            font-family: $myfont;
+        }
+       }
+    }
+    .nav__connect{
+        display: flex;
+        align-items: center;
+        width: 250px;
+        gap: 45px;
+        margin-right: 90px;
+        height: 41px;
+    }
+}
+.main__page{
+    width: 1300px;
+    height: 100px;
+    margin: 32px auto;
+    background-color: #F9F1E7;
+    .page__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 400px;
+        height: 90px;
+        margin-left: 50px;
+        h2, p{
+            @include font(16px, #9f9f9f, 400);
+            font-family: $myfont;
+        }
+        h3{
+            @include font(16px, #000, 400);
+            font-family: $myfont;
+        }
+    }
+}
+.sofa__wrapper{
+    display: inline-block;
+    display: flex;
+    width: 1300px;
+    height: 820px;
+    margin: auto;
+    .sofa__img{
+        display: flex;
+        margin-top: 50px;
+        width: 580px;
+        height: 520px;
+        margin-left: 30px;
+
+        .sofa__imgfirst{
+            width: 80px;
+            height: 420px;
+            gap: 30px 0;
+            img{
+                margin: 10px 0;
+            }
+        }
+        .sofa__imgsecond{
+            width: 481px;
+            height: 500px;
+        }
+    }
+
+    .sofa__content{
+        width: 800px;
+        height: 800px;
+        margin-left: 30px;
+        .sofa__content-title{
+            width: 282px;
+            height: 100px;
+            margin: 30px 0 0 30px;
+            h2{
+                font-family: $myfont;
+                @include font(42px, #000, 400);
+            }
+            p{
+                font-family: $myfont;
+                @include font(24px, #9f9f9f, 500);
+            }
+        }
+        .sofa__content-star{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 360px;
+            height: 22px;
+            margin: 30px 0 0 20px;
+            // background-color: red;
+            p{
+                font-family: $myfont;
+                @include font(14px, #9f9f9f, 400);
+            }
+        }
+        .sofa__content-text{
+            width: 424px;
+            height: 80px;
+            margin: 30px 0 0 30px;
+            p{
+                font-family: $myfont;
+                @include font(14px, #000, 400);
+            }
+        }
+        .sofa__content-size{
+          margin: 30px 0 0 30px;
+        }
+        .sofa__content-color{
+            width: 150px;
+            height: 70px;
+            margin: 30px 0 0 30px;
+            .color{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 120px;
+                height: 40px;
+                margin-top: 10px;
+            }
+            p{
+                font-family: $myfont;
+                @include font(14px, #9f9f9f, 400);
+            }
+          }
+          .sofa__add{
+            display: flex;
+            gap: 50px;
+            margin: 20px 0 0 30px;
+            width: 600px;
+            height: 125px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid black;
+            .btn__no{
+                padding: 15px 30px;
+            }
+            button{
+                @extend %btn-style;
+            }
+          }
+          .sofa__menu{
+            display: flex;
+            justify-content: space-between;
+            width: 320px;
+            height: 155px;
+            margin-left: 30px;
+            ul li{
+                @include font(16px, #9f9f9f, 400);
+                font-family: $myfont;
+                margin: 10px 0;
+                list-style-type: none;
+            }
+            ul:last-child{
+                height: 160px;
+                @include font(16px, #9f9f9f, 400);
+                font-family: $myfont;
+                list-style-type: none;
+                li:last-child{
+                    display: flex;
+                    gap: 20px;
+                    i{font-size: 20px;}
+                }
+            }
+            i{ 
+                color: #000;
+                padding: 5px 10px;
+                color: white;
+                background-color: black;
+                border-radius: 50%;
+                transition: 0.7s;
+                &:hover{
+                    background-color: blue;
+                    transform: scale(1.1);
+                }
+            }
+            i:last-child{
+                font-size: 3px;
+                padding: 5px 10px;
+                border-radius: 50%;
+                color: #fff;
+                 background-color: black;
+                 &:hover{
+                    background-color: blue;
+                    transform: scale(1.1);
+                }
+        }
+        
+          }
+    }
+}
+.about__wrapper{
+    width: 1300px;
+    height: 700px;
+    margin: 60px auto;
+    .about__title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 800px;
+        height: 40px;
+        margin: auto;
+        h2{
+            @include font(24px, #000, 500);
+            font-family: $myfont;
+        }
+        h3{
+            @include font(24px, #9f9f9f, 400);
+            font-family: $myfont;
+        }
+        h4{
+            @include font(24px, #9f9f9f, 400);
+            font-family: $myfont;
+        }
+    }
+    .about__content{
+        width: 1050px;
+        height: 50px;
+        margin: 40px auto;
+        p{
+            @include font(16px, #9f9f9f, 400);
+            font-family: $myfont;
+        }
+    }
+    .about__content2{
+        width: 1050px;
+        height: 96px;
+        margin: 37px auto;
+        p{
+            @include font(16px, #9f9f9f, 400);
+            font-family: $myfont;
+        }
+    }
+    .about__img{
+        display: flex;
+        justify-content: space-between;
+        width: 1240px;
+        height: 350px;
+        margin: auto;
+    }
+}
+.product__wrapper{
+    position: relative;
+    width: 1300px;
+    height: 550px;
+    margin: auto;
+    .product__title{
+        width: 500px;
+        height: 50px;
+        margin: 60px auto;
+        h2{
+            @include font(36px, #000, 600);
+            font-family: $myfont;
+            text-align: center;
+        }
+    }
+    .product__container{
+        display: flex;  
+        justify-content: space-evenly;
+        width: 1300px;
+        height: 450px;
+        display: flex;
+    }
+    .product__card{
+        width: 285px;
+        height: 450px;
+        transition: 0.6s;
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 0 0 3px solid gray;
+        }
+        .product__img{
+            width: 285px;
+            height: 301px;
+            background-color: gray;
+        }
+        .product__text{
+            display: inline-block;  
+            width: 285px;
+            height: 145px;
+            background-color: rgba(244, 245, 247, 1);
+            h2{
+                @include font(24px, #3A3A3a, 600);
+                font-family: $myfont; 
+                margin: 20px 0 0 10px;   
+            }
+            h3{
+                @include font(16px, #898989, 500);
+                font-family: $myfont;    
+                margin: 5px 0 0 10px;   
+
+            }
+            .product__price{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 250px;
+                height: 40px;
+                margin: 5px 0 0 10px;   
+                p{
+                    @include font(16px, #3a3a3a, 400);
+                    font-family: $myfont; 
+                }
+                del{
+                    @include font(16px, #B0B0B0, 400);
+                    font-family: $myfont; 
+                }
+            }
+            #gift{
+                position: absolute;
+                top: 120px;
+                left: calc(19%);
+            }
+            #gift2{
+                position: absolute;
+                top: 120px;
+                left: calc(68%);
+            }
+        }
+    }
+}
+.show__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 255px;
+    height: 50px;
+    margin: 45px auto;
+    button{
+        @include font(16px, #B88E2F, 600);
+        font-family: $myfont;
+        padding: 12px 75px;
+        border: 1px solid #B88E2F;
+        background-color: #fff;
+    }
+}
+
+footer{
+    // display: flex;
+    align-items: center;
+    width: 1300px;
+    height: 505px;
+    margin: 92px auto;
+    .footer__date{
+        width: 240px;
+        height: 25px;
+        margin: 35px 0 0 20px;
+        p{
+            @include font(16px, #000, 400);
+            font-family: $myfont;
+        }
+    }
+}
+.footer__container{
+    display: flex;
+    justify-content: space-between;
+    width: 1260px;
+    height: 430px;
+    margin: auto;
+    border-bottom: 1px solid ;
+    background-color: rgba(246, 242, 242, 0.286);
+    .footer__content{
+        display: inline-block;
+        width: 285px;
+        height: 410px;
+        h2{
+            @include font(24px, #000, 700);
+            font-family: $myfont;
+            margin: 50px 0 0 20px;
+        }
+        p{
+            @include font(16px, #9f9f9f, 400);
+            font-family: $myfont;
+            margin: 50px 0 0 20px;
+        }
+    }
+    .footer__menu{
+        width: 140px;
+        height: 410px;
+        ul li{
+            list-style-type: none;
+            @include font(16px, #000, 500);
+            font-family: $myfont;
+            margin: 56px 0;
+        }
+        li:first-child{
+            @include font(16px, #9f9f9f, 500);
+            
+        }
+    }
+    .footer__form{
+        width: 370px;
+        height: 200px;
+        h3{
+            @include font(16px, #9f9f9f, 500);
+            font-family: $myfont;
+            margin-top: 50px;
+        }
+        input{
+            margin: 50px 0;
+            width: 240px;
+            margin-right: 10px;
+            height: 35px;
+            text-indent: 10px;
+            border: none;
+            border-radius: 2px;
+            border-bottom: 1px solid #000;
+            @include font(15px, #9f9f9f, 400);
+            font-weight: $myfont;
+        }
+        button{
+            width: 95px;
+            height: 34px;
+            border: none;
+            background-color: #fff;
+            border-bottom: 1px solid;
+            border-radius: 2px;
+            @include font(15px, #000, 600);
+            font-weight: $myfont;
+        }
+    }
+}
